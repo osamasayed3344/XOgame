@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(23, 21, 54);
+}
+#choice,#numberwins{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 580px;
+    top: 20px;
+}
+#numberwins{
+    top:100px;
+}
+#choice span,#numberwins span{
+    margin-right: 50px;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: cursive;
+    color: white;
+}
+#numberwins span{
+    margin-right: 110px;
+}
+#choice span:nth-of-type(2){
+    margin-left: 50px;
+}
+#pointer{
+    width: 0;
+    height: 0;
+    position: fixed;
+    left: 580px;
+    top: 230px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid red;
+    animation: myamination 1s infinite;
+}
+@keyframes myamination{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(-30px);}
+}
+#background_items{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    position: fixed;
+    left: 530px;
+    top: 300px;
+    background-color: rgb(4, 117, 102);
+    color: white;
+    box-shadow: 1px 1px 4px 4px black;
+}
+#background_items div{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: cursive;
+    cursor: pointer;
+}
+#display_result{
+    background-color: rgba(170, 11, 11,80%);
+    width: 100%;
+    height: 100%;
+    font-size: 70px;
+    font-weight: 900;
+    font-style: italic;
+    font-family: monospace;
+    color: white;
+    text-shadow: 2.3px 2.3px black;
+    text-align: center;
+    position: fixed;
+    z-index: 99;
+    padding-top: 250px;
+    animation: amination_win 1s;
+    display: none;
+    flex-direction: column;
+}
+#display_result button{
+    width: 140px;
+    height: 35px;
+    margin: 50px auto;
+    background-color: rgb(11, 44, 71);
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 1s;
+}
+#display_result button:hover{
+    background-color: rgb(3, 128, 24);
+}
+@keyframes amination_win{
+    0%{transform: scale(0,0);}
+    100%{transform: scale(100%,100%);}
+}
+footer{
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    font-size: 20px;
+    position: fixed;
+    left: 540px;
+    top: 630px;
+}
