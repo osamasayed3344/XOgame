@@ -6,12 +6,10 @@ for(var element of elements){
         if(c=='x'){
             document.getElementById(event.target.id).innerHTML="x";
             c='o';
-            document.getElementById("pointer").style.left="730px";
         }
         else{
             document.getElementById(event.target.id).innerHTML="o";
             c='x';
-            document.getElementById("pointer").style.left="580px";
         }
         document.getElementById(event.target.id).style.pointerEvents="none";
         //////////////////////////////////////////
@@ -59,5 +57,4 @@ document.getElementById("btn_newgame").onclick=function(){
         element.style.pointerEvents="visible";
     }
     c='x';
-    document.getElementById("pointer").style.left="580px";
 }
